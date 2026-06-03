@@ -1,0 +1,119 @@
+@import './base.css';
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* 言寄星 · 星空玻璃主题 */
+:root {
+  --primary-color: #7c9cff;
+  --primary-light: #a8b8ff;
+  --primary-dark: #5a6fd6;
+
+  --secondary-color: #e879f9;
+  --accent-warm: #fcd34d;
+
+  --bg-overlay: rgba(8, 12, 32, 0.45);
+  --bg-glass: rgba(255, 255, 255, 0.08);
+  --bg-glass-strong: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.14);
+
+  --text-color: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --text-soft: rgba(255, 255, 255, 0.72);
+
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(124, 156, 255, 0.25);
+
+  --gradient-primary: linear-gradient(135deg, #6366f1, #a855f7);
+  --gradient-voice: linear-gradient(145deg, #3b82f6, #8b5cf6 55%, #c084fc);
+  --gradient-ai: linear-gradient(135deg, rgba(99, 102, 241, 0.35), rgba(168, 85, 247, 0.25));
+
+  --primary-neo-color: rgba(124, 156, 255, 0.35);
+
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-color);
+  background: #0a0e1a;
+}
+
+/* 全局星空底：由 .app-container 提供图与遮罩 */
+
+.chat-user {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-radius: 16px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.chat-ai {
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 10px 14px;
+  color: var(--text-color);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: var(--bg-glass);
+  color: var(--text-soft);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 10px 16px;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-glass-strong);
+}
+
+.input-box {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  transition: all 0.2s;
+  backdrop-filter: blur(14px);
+  color: var(--text-color);
+}
+
+.input-box:focus {
+  border-color: rgba(124, 156, 255, 0.55);
+  box-shadow: 0 0 0 3px var(--primary-neo-color);
+  outline: none;
+}
+
+.card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+}
